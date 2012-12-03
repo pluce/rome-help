@@ -1,0 +1,13 @@
+#{extends 'main.html' /}
+#{set title:'Accueil' /}
+
+<div class="row">
+    
+#{list items:themes, as:'the'}
+
+    <div class="span2">
+        <a href="@{Application.theme(the.label)}">${the.label}</a>
+    </div>
+
+#{/list}
+</div>

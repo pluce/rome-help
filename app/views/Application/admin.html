@@ -1,0 +1,72 @@
+#{extends 'main.html' /}
+#{set title:'Administration' /}
+
+<div class="row">
+    
+    <div class="span6">
+        <h2>Ajout d'un thème</h2>
+        #{form @Application.addTheme()}
+              <div class="control-group">
+                <label class="control-label" for="inputTitre">Titre</label>
+                <div class="controls">
+                  <input type="text" name="titre" id="inputTitre" placeholder="Titre">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputParent">Parent</label>
+                <div class="controls">
+                  <select name="parent" id="inputParent" placeholder="Parent">
+                    <option value="0">Aucun</option>
+                    #{list items:rootThemes, as:'the'}
+
+                    <option value="${the.id}">${the.label}</option>
+
+                    #{/list}
+                  </select>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="controls">
+                  <button type="submit" class="btn btn-primary">Envoyer</button>
+                </div>
+              </div>
+        #{/form}
+    </div>
+
+    
+    <div class="span6">
+        <h2>Ajout d'une indication</h2>
+        #{form @Application.addIndication()}
+              <div class="control-group">
+                <label class="control-label" for="inputTitre">Titre</label>
+                <div class="controls">
+                  <input type="text" name="titre" id="inputTitre" placeholder="Titre">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputValeur">Valeur</label>
+                <div class="controls">
+                  <input type="text" name="valeur" id="inputValeur" placeholder="Valeur">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputTheme">Thème</label>
+                <div class="controls">
+                  <select name="theme" id="inputTheme" placeholder="Thème">
+                    #{list items:allThemes, as:'the'}
+
+                    <option value="${the.id}">${the.label}</option>
+
+                    #{/list}
+                  </select>
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="controls">
+                  <button type="submit" class="btn btn-primary">Envoyer</button>
+                </div>
+              </div>
+        #{/form}
+    </div>
+
+</div>

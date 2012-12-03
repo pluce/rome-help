@@ -1,0 +1,11 @@
+table thead tr.inverse {
+    background-color: #503021;
+    color: #E5D6BC;
+}
+table thead tr.inverse th {
+    text-align: center;
+}
+
+.themesIndications tbody td {
+    width: 30%;
+}
