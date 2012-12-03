@@ -46,17 +46,22 @@ public class Application extends Controller {
         if(parent != 0){
             Theme pa = Theme.findById(parent);
             t = new Theme(titre,pa);
+			t.save();
+			pa.save();
         } else {
+			t.save();
             t = new Theme(titre);
         }
-        t.save();
+		
         Application.admin();
     }
     public static void addIndication(String titre,String valeur,Long theme){
         Theme t = Theme.findById(theme);
         Indication i = new Indication(titre,valeur,t);
+		
         i.save();
-        Application.admin();
+        t.save();
+		Application.admin();
     }
     
     public static void theme(String actualTheme) {
