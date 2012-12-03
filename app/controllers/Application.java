@@ -49,8 +49,8 @@ public class Application extends Controller {
 			t.save();
 			pa.save();
         } else {
-			t.save();
             t = new Theme(titre);
+			t.save();
         }
 		
         Application.admin();
