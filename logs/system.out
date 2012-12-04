@@ -1,0 +1,7 @@
+CompilerOracle: exclude jregex/Pretokenizer.next
+Listening for transport dt_socket at address: 8000
+13:25:17,670 INFO  ~ Starting D:\dev\play\rome-help
+13:25:17,676 WARN  ~ Declaring modules in application.conf is deprecated. Use dependencies.yml instead (module.secure)
+13:25:17,677 INFO  ~ Module secure is available (D:\dev\play\modules\secure)
+13:25:18,532 WARN  ~ You're running Play! in DEV mode
+13:25:18,724 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
