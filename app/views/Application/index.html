@@ -3,10 +3,27 @@
 
 <div class="row">
     
+<style>
+    .themeBox {
+        text-align: center;
+    }
+    .themeBox .delete{
+        display: none;
+        position: absolute;    
+    }
+    .themeBox:hover .delete{
+        display: block; 
+    }
+</style>
 #{list items:themes, as:'the'}
 
-    <div class="span2">
-        <a href="@{Application.theme(the.label)}">${the.label}</a>
+    <div class="span2 themeBox">
+        <div class="well well-small">
+#{secure.check ""}
+<a href="@{Administration.removeTheme(the.id,null)}" class="delete btn btn-mini btn-danger"><i class="icon icon-remove"></i></a>
+#{/secure.check}
+            <a href="@{Application.theme(the.label)}">${the.label}</a>
+        </div>
     </div>
 
 #{/list}

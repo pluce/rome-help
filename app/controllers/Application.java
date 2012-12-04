@@ -35,35 +35,6 @@ public class Application extends Controller {
         render(themes);
     }
     
-    public static void admin(){
-        List<Theme> rootThemes = Theme.find("byRoot",true).fetch();
-        List<Theme> allThemes = Theme.findAll();
-        render(rootThemes,allThemes);
-    }
-    
-    public static void addTheme(String titre,Long parent){
-        Theme t;
-        if(parent != 0){
-            Theme pa = Theme.findById(parent);
-            t = new Theme(titre,pa);
-			t.save();
-			pa.save();
-        } else {
-            t = new Theme(titre);
-			t.save();
-        }
-		
-        Application.admin();
-    }
-    public static void addIndication(String titre,String valeur,Long theme){
-        Theme t = Theme.findById(theme);
-        Indication i = new Indication(titre,valeur,t);
-		
-        i.save();
-        t.save();
-		Application.admin();
-    }
-    
     public static void theme(String actualTheme) {
         List<Theme> themes = Theme.find("byRoot",true).fetch();
         Theme theActualTheme = Theme.find("byLabel", actualTheme).first();

@@ -6,6 +6,7 @@ package models;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -23,10 +24,10 @@ public class Theme extends Model{
     @Column
     public boolean root = true;
     
-    @OneToMany
+    @OneToMany(cascade=CascadeType.REMOVE)
     public List<Indication> indications = new ArrayList<Indication>();
     
-    @OneToMany
+    @OneToMany(cascade=CascadeType.REMOVE)
     public List<Theme> sousThemes = new ArrayList<Theme>();
 
     public Theme(String label) {

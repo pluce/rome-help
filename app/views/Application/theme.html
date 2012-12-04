@@ -16,17 +16,39 @@
             </ul>
         </div>
     </div>
+    <style>
+        .deleteTheme {
+            position:absolute;
+            display: none;
+        }
+        div.span4:hover .deleteTheme {
+            display: block;
+        }
+        
+        .deleteIndication {
+            position:absolute;
+            margin-left: 173px;
+            margin-top: -1px;
+            display: none;
+        }
+        .themesIndications tbody tr:hover .deleteIndication {
+            display: block;
+        }
+    </style>
     <div class="span9">
         <div class="row">
             <div class="span4 offset2">        
+                <a href="@{Administration.removeTheme(theActualTheme.id,null)}" class="deleteTheme btn btn-mini btn-danger"><i class="icon icon-remove"></i>supprimer le thème</a>
                 #{renderThemeIndications theme:theActualTheme/}
+                
             </div>
         </div>
         <div class="row">          
                 #{list items:theActualTheme.sousThemes, as:'ssThe'}
                 <div class="span4">                     
-                    
+                    <a href="@{Administration.removeTheme(ssThe.id,theActualTheme.id)}" class="deleteTheme btn btn-mini btn-danger"><i class="icon icon-remove"></i>supprimer le thème</a>
                  #{renderThemeIndications theme:ssThe/}
+                 
                 </div>
                 #{/list}
         </div>

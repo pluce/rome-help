@@ -5,7 +5,7 @@
     
     <div class="span6">
         <h2>Ajout d'un thème</h2>
-        #{form @Application.addTheme()}
+        #{form @Administration.addTheme()}
               <div class="control-group">
                 <label class="control-label" for="inputTitre">Titre</label>
                 <div class="controls">
@@ -36,7 +36,7 @@
     
     <div class="span6">
         <h2>Ajout d'une indication</h2>
-        #{form @Application.addIndication()}
+        #{form @Administration.addIndication()}
               <div class="control-group">
                 <label class="control-label" for="inputTitre">Titre</label>
                 <div class="controls">
@@ -68,5 +68,5 @@
               </div>
         #{/form}
     </div>
-
+    <a href="@{Secure.logout}">se déconnecter</a>
 </div>

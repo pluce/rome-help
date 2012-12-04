@@ -4,7 +4,7 @@
     </thead>
     <tbody>
         #{list items:_theme.indications, as:'indic'}
-        <tr><th>${indic.label}</th><td>${indic.valeur}</td></tr>
+        <tr><th><a href="@{Administration.removeIndication(indic.id,_theme.id)}" class="deleteIndication btn btn-mini btn-danger"><i class="icon icon-remove"></i></a>${indic.label}</th><td>${indic.valeur}</td></tr>
         #{/list}
     </tbody>
 </table>
