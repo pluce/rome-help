@@ -35,7 +35,6 @@ public class Administration extends Controller {
             t = new Theme(titre);
 			t.save();
         }
-		
         Administration.admin();
     }
     public static void removeTheme(Long id,Long parentId){

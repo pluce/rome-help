@@ -38,9 +38,15 @@ public class Application extends Controller {
     public static void theme(String actualTheme) {
         List<Theme> themes = Theme.find("byRoot",true).fetch();
         Theme theActualTheme = Theme.find("byLabel", actualTheme).first();
+        if(theActualTheme == null) notFound("Le thème '"+actualTheme+"' est inconnu.");
         //List<Indication> indications = Indication.find("byTheme",theActualTheme).fetch();
         
         render(theActualTheme,themes);
+    }
+    
+    public static void apiThemes(){        
+        List<Theme> themes = Theme.find("byRoot",true).fetch();
+        renderJSON(themes);
     }
 
 }

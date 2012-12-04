@@ -1,7 +1,111 @@
 CompilerOracle: exclude jregex/Pretokenizer.next
 Listening for transport dt_socket at address: 8000
-13:25:17,670 INFO  ~ Starting D:\dev\play\rome-help
-13:25:17,676 WARN  ~ Declaring modules in application.conf is deprecated. Use dependencies.yml instead (module.secure)
-13:25:17,677 INFO  ~ Module secure is available (D:\dev\play\modules\secure)
-13:25:18,532 WARN  ~ You're running Play! in DEV mode
-13:25:18,724 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+13:56:28,878 INFO  ~ Starting D:\dev\play\rome-help
+13:56:28,882 WARN  ~ Declaring modules in application.conf is deprecated. Use dependencies.yml instead (module.secure)
+13:56:28,883 INFO  ~ Module secure is available (D:\dev\play\modules\secure)
+13:56:29,575 WARN  ~ You're running Play! in DEV mode
+13:56:29,702 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+13:56:40,713 INFO  ~ Connected to jdbc:mysql://localhost/rome_aide?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+13:56:42,710 INFO  ~ Application 'rome-help' is now started !
+13:56:52,151 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+13:56:52,314 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_
+13:57:00,383 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+13:57:03,386 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+13:57:03,394 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.label=? limit ?
+13:57:03,746 DEBUG ~ select indication0_.Theme_id as Theme1_1_1_, indication0_.indications_id as indicati2_1_, indication1_.id as id0_0_, indication1_.label as label0_0_, indication1_.valeur as valeur0_0_ from Theme_Indication indication0_ inner join Indication indication1_ on indication0_.indications_id=indication1_.id where indication0_.Theme_id=?
+13:57:03,755 DEBUG ~ select sousthemes0_.Theme_id as Theme1_1_1_, sousthemes0_.sousThemes_id as sousThemes2_1_, theme1_.id as id1_0_, theme1_.label as label1_0_, theme1_.root as root1_0_ from Theme_Theme sousthemes0_ inner join Theme theme1_ on sousthemes0_.sousThemes_id=theme1_.id where sousthemes0_.Theme_id=?
+13:57:07,131 DEBUG ~ select theme0_.id as id1_0_, theme0_.label as label1_0_, theme0_.root as root1_0_ from Theme theme0_ where theme0_.id=?
+13:57:07,141 DEBUG ~ select indication0_.Theme_id as Theme1_1_1_, indication0_.indications_id as indicati2_1_, indication1_.id as id0_0_, indication1_.label as label0_0_, indication1_.valeur as valeur0_0_ from Theme_Indication indication0_ inner join Indication indication1_ on indication0_.indications_id=indication1_.id where indication0_.Theme_id=?
+13:57:07,144 DEBUG ~ select sousthemes0_.Theme_id as Theme1_1_1_, sousthemes0_.sousThemes_id as sousThemes2_1_, theme1_.id as id1_0_, theme1_.label as label1_0_, theme1_.root as root1_0_ from Theme_Theme sousthemes0_ inner join Theme theme1_ on sousthemes0_.sousThemes_id=theme1_.id where sousthemes0_.Theme_id=?
+13:57:07,163 DEBUG ~ delete from Theme where id=?
+13:57:07,208 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+13:57:08,929 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+14:02:57,778 ERROR ~ 
+
+@6ch2dopoe
+Internal Server Error (500) for request GET /
+
+Compilation error (In /app/controllers/Application.java around line 41)
+The file /app/controllers/Application.java could not be compiled. Error raised is : Syntax error, insert ";" to complete Statement
+
+play.exceptions.CompilationException: Syntax error, insert ";" to complete Statement
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:478)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:281)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:324)
+	at play.Play.detectChanges(Play.java:625)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+14:02:57,890 ERROR ~ 
+
+@6ch2dopof
+Internal Server Error (500) for request GET /favicon.ico
+
+Compilation error (In /app/controllers/Application.java around line 41)
+The file /app/controllers/Application.java could not be compiled. Error raised is : Syntax error, insert ";" to complete Statement
+
+play.exceptions.CompilationException: Syntax error, insert ";" to complete Statement
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:478)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:281)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:324)
+	at play.Play.detectChanges(Play.java:625)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+14:03:06,665 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+14:03:10,810 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+14:03:10,811 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.label=? limit ?
+14:03:11,237 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+14:03:11,238 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.label=? limit ?
+14:05:16,254 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+14:05:16,256 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.label=? limit ?
+14:05:26,752 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+14:05:29,887 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+14:05:29,891 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.label=? limit ?
+14:06:05,906 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+14:06:05,908 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.label=? limit ?
+14:06:16,311 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+14:06:17,878 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+14:06:17,879 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_
+14:06:19,665 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+14:06:20,904 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+14:06:20,905 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_
+14:06:22,432 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+14:06:27,651 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+14:06:29,021 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+14:06:29,028 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_
+14:06:58,162 DEBUG ~ select theme0_.id as id1_, theme0_.label as label1_, theme0_.root as root1_ from Theme theme0_ where theme0_.root=?
+### Excluding compile: jregex.Pretokenizer::next
+14:10:27,383 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_ where theme0_.root=?
+14:10:27,388 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_
+14:10:28,474 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_ where theme0_.root=?
+14:10:28,776 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_ where theme0_.root=?
+14:10:28,784 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_ where theme0_.label=? limit ?
+14:10:32,555 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_ where theme0_.root=?
+14:10:32,558 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_
+14:10:39,687 DEBUG ~ insert into Theme (label, root) values (?, ?)
+14:10:39,712 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_ where theme0_.root=?
+14:10:39,713 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_
+14:10:49,144 DEBUG ~ select theme0_.id as id7_0_, theme0_.label as label7_0_, theme0_.root as root7_0_ from Theme theme0_ where theme0_.id=?
+14:10:49,146 DEBUG ~ select sousthemes0_.Theme_id as Theme1_7_1_, sousthemes0_.sousThemes_id as sousThemes2_1_, theme1_.id as id7_0_, theme1_.label as label7_0_, theme1_.root as root7_0_ from Theme_Theme sousthemes0_ inner join Theme theme1_ on sousthemes0_.sousThemes_id=theme1_.id where sousthemes0_.Theme_id=?
+14:10:49,148 DEBUG ~ insert into Theme (label, root) values (?, ?)
+14:10:49,152 DEBUG ~ insert into Theme_Theme (Theme_id, sousThemes_id) values (?, ?)
+14:10:49,172 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_ where theme0_.root=?
+14:10:49,173 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_
+14:10:57,952 DEBUG ~ insert into Theme (label, root) values (?, ?)
+14:10:57,972 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_ where theme0_.root=?
+14:10:57,973 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_
+14:11:02,705 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_ where theme0_.root=?
+14:11:02,727 DEBUG ~ select indication0_.Theme_id as Theme1_7_1_, indication0_.indications_id as indicati2_1_, indication1_.id as id6_0_, indication1_.label as label6_0_, indication1_.valeur as valeur6_0_ from Theme_Indication indication0_ inner join Indication indication1_ on indication0_.indications_id=indication1_.id where indication0_.Theme_id=?
+14:11:02,728 DEBUG ~ select sousthemes0_.Theme_id as Theme1_7_1_, sousthemes0_.sousThemes_id as sousThemes2_1_, theme1_.id as id7_0_, theme1_.label as label7_0_, theme1_.root as root7_0_ from Theme_Theme sousthemes0_ inner join Theme theme1_ on sousthemes0_.sousThemes_id=theme1_.id where sousthemes0_.Theme_id=?
+14:11:02,730 DEBUG ~ select indication0_.Theme_id as Theme1_7_1_, indication0_.indications_id as indicati2_1_, indication1_.id as id6_0_, indication1_.label as label6_0_, indication1_.valeur as valeur6_0_ from Theme_Indication indication0_ inner join Indication indication1_ on indication0_.indications_id=indication1_.id where indication0_.Theme_id=?
+14:11:02,732 DEBUG ~ select sousthemes0_.Theme_id as Theme1_7_1_, sousthemes0_.sousThemes_id as sousThemes2_1_, theme1_.id as id7_0_, theme1_.label as label7_0_, theme1_.root as root7_0_ from Theme_Theme sousthemes0_ inner join Theme theme1_ on sousthemes0_.sousThemes_id=theme1_.id where sousthemes0_.Theme_id=?
+14:11:02,733 DEBUG ~ select indication0_.Theme_id as Theme1_7_1_, indication0_.indications_id as indicati2_1_, indication1_.id as id6_0_, indication1_.label as label6_0_, indication1_.valeur as valeur6_0_ from Theme_Indication indication0_ inner join Indication indication1_ on indication0_.indications_id=indication1_.id where indication0_.Theme_id=?
+14:11:02,734 DEBUG ~ select sousthemes0_.Theme_id as Theme1_7_1_, sousthemes0_.sousThemes_id as sousThemes2_1_, theme1_.id as id7_0_, theme1_.label as label7_0_, theme1_.root as root7_0_ from Theme_Theme sousthemes0_ inner join Theme theme1_ on sousthemes0_.sousThemes_id=theme1_.id where sousthemes0_.Theme_id=?
+14:11:02,783 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_ where theme0_.root=?
+14:11:02,785 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_ where theme0_.label=? limit ?
+14:12:10,460 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_ where theme0_.root=?
+14:12:10,933 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_ where theme0_.root=?
+14:12:10,935 DEBUG ~ select theme0_.id as id7_, theme0_.label as label7_, theme0_.root as root7_ from Theme theme0_ where theme0_.label=? limit ?

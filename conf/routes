@@ -5,6 +5,7 @@
 # Home page
 GET     /                                       Application.index
 GET     /admin                                       Administration.admin
+GET     /api/themes                                   Application.apiThemes
 GET     /{actualTheme}                                Application.theme
 
 # Ignore favicon requests

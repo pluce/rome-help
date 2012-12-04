@@ -1,11 +1,6 @@
-<!DOCTYPE html>
+#{extends 'main.html' /}
+#{set title:'Erreur Application' /}
 
-<html>
-    <head>
-        <title>Application error</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=${_response_encoding}"/>	
-    </head>
-    <body>
         #{if play.mode.name() == 'DEV'}
             #{500 exception /}
         #{/if}
@@ -17,5 +12,3 @@
                 </p>
             #{/if}
         #{/else}
-    </body>
-</html>
