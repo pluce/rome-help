@@ -3,7 +3,7 @@ import java.util.*;
 import play.test.*;
 import models.*;
 
-public class BasicTest extends UnitTest {
+public class HistoriqueTest extends UnitTest {
 
     @Test
     public void aVeryImportantThingToTest() {

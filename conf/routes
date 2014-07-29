@@ -3,10 +3,10 @@
 # ~~~~
 
 # Home page
-GET     /                                       Application.index
+GET     /                                       Application.index.secure()
 GET     /admin                                       Administration.admin
-GET     /api/themes                                   Application.apiThemes
-GET     /{actualTheme}                                Application.theme
+GET     /api/themes                                   ThemesController.apiThemes
+GET     /themes/{actualTheme}                                ThemesController.theme
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

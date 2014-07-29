@@ -22,7 +22,7 @@
 #{secure.check ""}
 <a href="@{Administration.removeTheme(the.id,null)}" class="delete btn btn-mini btn-danger"><i class="icon icon-remove"></i></a>
 #{/secure.check}
-            <a href="@{Application.theme(the.label)}">${the.label}</a>
+            <a href="@{ThemesController.theme(the.label)}">${the.label}</a>
         </div>
     </div>
 

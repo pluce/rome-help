@@ -10,7 +10,7 @@
                    
 #{list items:themes, as:'the'}
     <li  #{if the.label==theActualTheme.label}class="active"#{/if} >
-        <a href="@{Application.theme(the.label)}">${the.label}</a>
+        <a href="@{ThemesController.theme(the.label)}">${the.label}</a>
     </li>
 #{/list}
             </ul>

@@ -44,7 +44,7 @@ public class Administration extends Controller {
             pa.sousThemes.remove(t);
             pa.save();
             t.delete();
-            Application.theme(pa.label);
+            ThemesController.theme(pa.label);
         } else {
             t.delete();
             Application.index();
@@ -56,7 +56,7 @@ public class Administration extends Controller {
         t.indications.remove(i);
         t.save();
         i.delete();
-        Application.theme(t.label);
+        ThemesController.theme(t.label);
     }
     public static void addIndication(String titre,String valeur,Long theme){
         Theme t = Theme.findById(theme);

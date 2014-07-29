@@ -1,12 +1,10 @@
 package controllers;
 
-import play.*;
 import play.mvc.*;
 
 import java.util.*;
 
 import models.*;
-import play.test.Fixtures;
 
 public class Application extends Controller {
 
@@ -34,19 +32,4 @@ public class Application extends Controller {
         List<Theme> themes = Theme.find("byRoot",true).fetch();
         render(themes);
     }
-    
-    public static void theme(String actualTheme) {
-        List<Theme> themes = Theme.find("byRoot",true).fetch();
-        Theme theActualTheme = Theme.find("byLabel", actualTheme).first();
-        if(theActualTheme == null) notFound("Le thème '"+actualTheme+"' est inconnu.");
-        //List<Indication> indications = Indication.find("byTheme",theActualTheme).fetch();
-        
-        render(theActualTheme,themes);
-    }
-    
-    public static void apiThemes(){        
-        List<Theme> themes = Theme.find("byRoot",true).fetch();
-        renderJSON(themes);
-    }
-
 }
